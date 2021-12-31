@@ -2,10 +2,10 @@
 let raceNumber = Math.floor(Math.random() * 1000);
 
 // variable for if the runner is early or not
-let registerEarly = true;
+let registerEarly = false;
 
 // variable for the runners age
-let runnerAge = 19;
+let runnerAge = 18;
 
 // control flow to see if the runnnner is an adult or not
 if(runnerAge > 18 && registerEarly === true){
@@ -20,6 +20,9 @@ else{
 if(runnerAge > 18 && registerEarly){
   console.log(`${raceNumber} will race at 9:30 am.`);
 }
-else{
-  console.log('You will not be racing early.');
+else if(runnerAge > 18 && !registerEarly){
+  console.log(`${raceNumber} will race at 11:00am`);
+}
+else if(runnerAge === 18){
+  console.log('Runner should see the registration desk.')
 }
